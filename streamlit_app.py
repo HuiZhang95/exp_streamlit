@@ -67,7 +67,7 @@ if page == pages[1]:
     # Display the correlation matrix of the explanatory variables.
 
     fig, ax = plt.subplots()
-    sns.heatmap(df.corr(), ax=ax)
+    sns.heatmap(df[['Age', 'Fare', 'SibSp', 'Parch']].corr(), ax=ax)
     st.write(fig)
 
 
